@@ -1,0 +1,23 @@
+BoxLayout:
+    orientation: 'vertical'
+    BoxLayout:
+        orientation: 'horizontal'
+        TextInput:
+            id: input_miles
+            multiline: False
+            text: '0'
+            on_text: app.convert_m_km(int(input_miles.text))
+        BoxLayout:
+            orientation: 'vertical'
+            Button:
+                text: "Up"
+                on_press: app.increment_miles(1)
+            Button:
+                text: "Down"
+                on_press: app.increment_miles(-1)
+#    Button:
+#        text: "Convert M to Km"
+#        on_press: app.convert_m_km(int(input_miles.text))
+    Label:
+        text: '0'
+        id: output_label
