@@ -1,10 +1,11 @@
-numbers = []
-for i in range(5):
-    number = int(input("Number: "))
-    numbers.append(number)
+COLOUR_NAMES = {"aliceblue": "fof8ff", "aquamarine1": "7fffd4", "blue1": "0000ff", "brown": "a52a2a", "blueviolet": "8a2be2"}
 
-print("The first number is", numbers[0])
-print("The last number is", numbers[-1])
-print("The smallest number is", min(numbers))
-print("The largest number is", max(numbers))
-
+colour = input("Enter colour name: ")
+colour = colour.lower()
+while colour != "":
+    if colour in COLOUR_NAMES:
+        print(colour, "is", COLOUR_NAMES[colour])
+    else:
+        print("Invalid colour name")
+    colour = input("Enter colour name: ")
+    colour = colour.lower()
